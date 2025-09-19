@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Salman - Front-End Designer & Developer</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">Salman Butt</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Muhammad Salman</h1>
+                <p class="subtitle">Front-End Designer | FCS & DIT Student | Python & ML Learner</p>
+                <p>I'm a self-driven front-end designer and student of computer science, currently exploring Python for data science and machine learning. With a solid foundation in web design, I'm expanding into the world of AI, eager to solve real-world problems through automation, data analysis, and intelligent systems.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#experience" class="btn btn-secondary">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript - Designed practice websites, portfolios, and layouts during coursework and personal projects.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python Programming</h3>
+                    <p>DIT Course - Learned Python fundamentals through college assignments and self-study for data science applications.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Networking & ICT</h3>
+                    <p>DIT & FCS Coursework - Covered introductory concepts of networking and ICT tools for modern applications.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database & Programming</h3>
+                    <p>Academic Learning - Gained a foundation in SQL and Java as part of ongoing computer science studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Academic Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3>Web Development Projects</h3>
+                        <p>Completed various HTML/CSS projects including portfolios and practice websites during coursework.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Current</div>
+                        <h3>DIT Studies</h3>
+                        <p>Currently studying Diploma in Information Technology, focusing on Python programming and data science concepts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Current</div>
+                        <h3>FCS Program</h3>
+                        <p>Pursuing Foundation in Computer Science, building strong fundamentals in programming and software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to chat about technology, feel free to reach out!</p>
+                    <ul class="contact-details">
+                        <li>📍 Nowshera, KPK, Pakistan</li>
+                        <li>📧 salmanbutt0123sraja@gmail.com</li>
+                        <li>💼 <a href="https://www.linkedin.com/in/salman-butt-0a1a26316" target="_blank" style="color: white;">LinkedIn Profile</a></li>
+                    </ul>
+                </div>
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Counter -->
+    <div class="visitor-counter" id="visitorCounter">
+        👥 Visitor: <span id="visitorCount">1</span>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+   <script src="script.js"></script>
+</body>
+</html>
