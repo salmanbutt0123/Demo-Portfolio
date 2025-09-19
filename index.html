@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Salman - Front-End Designer & Developer</title>
     <link rel="stylesheet" href="portfolio.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("hGbjdsvz7Xd8Uzqpz"); // Replace with your EmailJS Public Key
+      })();
+    </script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -35,13 +42,20 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Muhammad Salman</h1>
-                <p class="subtitle">Front-End Designer | FCS & DIT Student | Python & ML Learner</p>
-                <p>I'm a self-driven front-end designer and student of computer science, currently exploring Python for data science and machine learning. With a solid foundation in web design, I'm expanding into the world of AI, eager to solve real-world problems through automation, data analysis, and intelligent systems.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#experience" class="btn btn-secondary">View My Work</a>
+            <div class="hero-layout">
+                <!-- Text Side -->
+                <div class="hero-text">
+                    <h1>Muhammad Salman</h1>
+                    <p class="subtitle">Front-End Designer | FCS & DIT Student | Python & ML Learner</p>
+                    <p>I'm a self-driven front-end designer and student of computer science, currently exploring Python for data science and machine learning. With a solid foundation in web design, I'm expanding into the world of AI, eager to solve real-world problems through automation, data analysis, and intelligent systems.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#experience" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+                <!-- Image Side -->
+                <div class="hero-image">
+                    <img src="My Pic.jpg" alt="Muhammad Salman">
                 </div>
             </div>
         </div>
@@ -116,7 +130,7 @@
                     <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to chat about technology, feel free to reach out!</p>
                     <ul class="contact-details">
                         <li>📍 Nowshera, KPK, Pakistan</li>
-                        <li>📧 salmanbutt0123sraja@gmail.com</li>
+                        <li>📧 <a href="mailto:salmanbutt0123sraja@gmail.com" style="color: white;">salmanbutt0123sraja@gmail.com</a></li>
                         <li>💼 <a href="https://www.linkedin.com/in/salman-butt-0a1a26316" target="_blank" style="color: white;">LinkedIn Profile</a></li>
                     </ul>
                 </div>
