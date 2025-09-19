@@ -140,48 +140,30 @@ function initializeContactForm() {
         sendContactEmail(data);
     });
 }
-
-// Send contact email (simulated)
+// Send contact email using EmailJS
 function sendContactEmail(data) {
-    // Show loading state
     const submitBtn = document.querySelector('#contactForm button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Simulate email sending delay
-    setTimeout(() => {
-        // Log the email data (in a real app, this would be sent to your backend)
-        console.log('Contact email would be sent to salmanbutt0123sraja@gmail.com:', {
-            from: data.email,
-            subject: `Portfolio Contact: ${data.subject}`,
-            body: `
-                New contact form submission from your portfolio:
-                
-                Name: ${data.name}
-                Email: ${data.email}
-                Subject: ${data.subject}
-                
-                Message:
-                ${data.message}
-                
-                Submitted at: ${data.timestamp}
-            `
-        });
-
-        // Reset form
+    emailjs.send("service_wwdb5sz", "template_ca9pnco", {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message
+    }).then(() => {
         document.getElementById('contactForm').reset();
-        
-        // Show success notification
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        
-        // Reset button
+        showNotification("Message sent successfully! I'll get back to you soon.", "success");
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-
-    }, 2000);
+    }).catch((error) => {
+        console.error("EmailJS Error:", error);
+        showNotification("Failed to send message. Please try again.", "error");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
 }
-
 // Show notifications
 function showNotification(message, type = 'success') {
     const notification = document.getElementById('notification');
