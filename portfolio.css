@@ -402,63 +402,6 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: flex;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: calc(100% - 60px);
-        left: 40px !important;
-        text-align: left !important;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Loading Animation */
 .loading {
     position: fixed;
@@ -515,6 +458,7 @@ body {
 .notification.error {
     background: #ef4444;
 }
+
 /* ===============================
    Hero Layout with Profile Picture
 ================================== */
@@ -555,50 +499,42 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 768px) {
-    .hero-layout {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-image {
-        margin-top: 2rem;
-    }
-    .hero-image img {
-        width: 180px;
-        height: 180px;
-    }
-}
 /* ===============================
-   Responsive Design
-   =============================== */
+   Improved Responsive Design
+================================== */
 
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
     }
 }
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     body {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .navbar {
         flex-direction: column;
-        padding: 1rem;
+        padding: 0.8rem 1rem;
     }
 
     .nav-links {
+        display: none; /* hidden by default, toggle via JS */
         flex-direction: column;
         gap: 1rem;
         margin-top: 1rem;
@@ -610,12 +546,17 @@ body {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
-        line-height: 2.2rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
     }
 
     .hero p {
         font-size: 1rem;
+        line-height: 1.6;
     }
 
     .hero-image img {
@@ -624,18 +565,38 @@ body {
     }
 
     section {
-        padding: 2rem 1rem;
+        padding: 2rem 1.2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 60px);
+        left: 40px !important;
+        text-align: left !important;
     }
 }
 
 /* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.95rem;
     }
 
     .hero p {
@@ -643,8 +604,12 @@ body {
     }
 
     .hero-image img {
-        width: 140px;
-        height: 140px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 
     .nav-links {
@@ -652,7 +617,6 @@ body {
     }
 
     section {
-        padding: 1.5rem 0.8rem;
+        padding: 1.5rem 1rem;
     }
 }
-
